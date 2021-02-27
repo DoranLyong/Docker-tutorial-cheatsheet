@@ -74,7 +74,7 @@
 15. Run a container with the ```nginx:1.14-alpine``` image and name it ```webapp```.
 ```bash
 # Container created 
-# Nmae:webapp
+# Name:webapp
 
 ~$ docker run --name webapp nginx:1.14-alpine
 ```
