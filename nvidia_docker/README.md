@@ -5,7 +5,7 @@
 * Uninstall old versions
 * Install using the repository
 
-### 2. [Root 권한 설정] - sudo 없이 사용하기(https://blusky10.tistory.com/359)
+### 2. [Root 권한 설정](https://blusky10.tistory.com/359) - sudo 없이 사용하기
 ```bash
 sudo usermod -aG docker $USER #현재 접속중인 사용자에게 권한주기 
 sudo usermod -aG docker your-user #your-user 사용자에게 권한주기
