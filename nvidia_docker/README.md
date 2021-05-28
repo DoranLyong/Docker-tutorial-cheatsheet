@@ -19,6 +19,10 @@ sudo usermod -aG docker your-user #your-user 사용자에게 권한주기
 ### 4. [Docker Compose 설치](https://docs.microsoft.com/ko-kr/visualstudio/docker/tutorials/use-docker-compose) - 다중 컨테이너 애플리케이션을 정의하고 공유할 수 있도록 개발된 도구
 * [Install Docker Compose](https://docs.docker.com/compose/install/)
 
+### 5. Docker에서 CUDA 환경으로 시작하기 
+* 예시로 PyTorch 이미지를 만들어보자 → [docker hub에서 검색](https://hub.docker.com/r/pytorch/pytorch/tags?page=1&ordering=last_updated)
+* 원하는 TAG의 이미지를 docker pull로 당겨오기 
+* 반드시 devel 버전을 설치할 것 (runtime 버전은 nvcc 헤드가 
 
 
 
