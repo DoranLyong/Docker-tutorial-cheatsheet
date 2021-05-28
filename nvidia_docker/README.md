@@ -1,5 +1,10 @@
 # Nvidia-docker GPU 할당하여 사용하기 
 
+### 1. [Docker 설치](https://docs.docker.com/engine/install/ubuntu/)
+* Check OS requirements 
+* Uninstall old versions
+* 
+
 
 
 
