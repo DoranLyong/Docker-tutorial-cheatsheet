@@ -29,7 +29,7 @@ sudo usermod -aG docker your-user #your-user 사용자에게 권한주기
 ```bash
 docker run --gpus all --net host -v [local PC 와 공유할 폴더] -dit [image:tag] /bin/bash   # 예시 
 
-docker run --gpus all --net host -v /home/<user>/<마운트할 디렉토리>:/< -dit pytorch/pytorch:1.8.0-cuda11.1-cudnn8-devel /bin/bash
+docker run --gpus all --net host -v /home/<user>/<마운트할 디렉토리>:/<컨테이너에 마운트할 위치> -dit pytorch/pytorch:1.8.0-cuda11.1-cudnn8-devel /bin/bash
 ```
   * ```--gpus all``` : pc에 설치된 gpu 장비에 모든 컨테이너가 접근가능하도록 해줌
   * ```--net host``` : 현재 pc 와 container 간 IP를 동일하게 함 ( ROS 때 편안, shared memory 도 local과 동일하게 사용 가능 )
