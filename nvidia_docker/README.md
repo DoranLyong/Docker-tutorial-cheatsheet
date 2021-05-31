@@ -37,6 +37,7 @@ docker run --gpus all --net host -v /home/kist-ubuntu -dit pytorch/pytorch:1.8.0
   * ```-dit``` : -d (detached mode, 백그라운드 모드), -it (-i와 -t를 동시에 사용한 것으로 터미널 입력을 위한 옵션)
 
 <br/>
+
 ```-dit``` 로 실행시키면 생성된 컨테이너가 백그라운드에서 실행된 상태가 됨. 
 * 이러면 따로 컨테이너를 켜는 명령어를 입력할 필요가 없음 - ```docker start [ContainerID or NAMES]```
 * 
