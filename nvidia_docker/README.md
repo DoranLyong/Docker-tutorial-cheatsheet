@@ -25,7 +25,8 @@ sudo usermod -aG docker your-user #your-user 사용자에게 권한주기
 ### 6. nvidia-docker에서 사용할 이미지 받아오기 
 * 예시로 PyTorch 이미지를 만들어보자 → [docker hub에서 검색](https://hub.docker.com/r/pytorch/pytorch/tags?page=1&ordering=last_updated)
 * 원하는 TAG의 이미지를 docker pull로 당겨오기 
-* 반드시 devel 버전을 설치할 것 (runtime 버전은 nvcc 헤드가 
+* 반드시 devel 버전을 설치할 것 (runtime 버전은 nvcc 헤드가 없다) 
+* 
 
 
 
