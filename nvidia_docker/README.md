@@ -26,7 +26,13 @@ sudo usermod -aG docker your-user #your-user 사용자에게 권한주기
 * 예시로 PyTorch 이미지를 만들어보자 → [docker hub에서 검색](https://hub.docker.com/r/pytorch/pytorch/tags?page=1&ordering=last_updated)
 * 원하는 TAG의 이미지를 docker pull로 당겨오기 
 * 반드시 devel 버전을 설치할 것 (runtime 버전은 nvcc 헤드가 없다) 
-* 
+```bash
+docker run --gpus all --net host -v [local PC 와 공유할 폴더] -dit [image:tag] /bin/bash   # 예시 
+
+docker run --gpus all --net host -v /home/kist-ubuntu -dit pytorch/pytorch:1.8.0-cuda11.1-cudnn8-devel /bin/bash
+```
+  * ```--gpus all``` : pc 에 있는 gpu 를 모두 컨테이너에서 접근가능하도록 해줌
+
 
 
 
