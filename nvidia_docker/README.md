@@ -33,8 +33,9 @@ docker run --gpus all --net host -v /home/kist-ubuntu -dit pytorch/pytorch:1.8.0
 ```
   * ```--gpus all``` : pc에 설치된 gpu 장비에 모든 컨테이너가 접근가능하도록 해줌
   * ```--net host``` : 현재 pc 와 container 간 IP를 동일하게 함 ( ROS 때 편안, shared memory 도 local과 동일하게 사용 가능 )
-  * ```-v [local PC 와 공유할 폴더]``` :  local PC의 디렉토리를 container의 어떤 디렉토리와 공유
-  * ```-dit``` : 반복 실행 
+  * ```-v [local PC 와 공유할 폴더]``` :  local PC의 디렉토리를 container의 어떤 디렉토리와 공유 (호스트와 컨테이너의 디렉토리를 연결 (마운트))
+  * ```-dit``` : -d (detached mode, 백그라운드 모드), -it (-i와 -t를 동시에 사용한 것으로 터미널 입력을 위한 옵션)
+  *
 
 
 
