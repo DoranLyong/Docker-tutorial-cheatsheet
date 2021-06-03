@@ -47,7 +47,7 @@ docker exec -it [ContainerID or NAMES] /bin/bash
 ```
 
 
-### [Docker + OpenCV-GUI](https://blog.naver.com/cheeryun/222383212241)
+### 7. [Docker + OpenCV-GUI](https://blog.naver.com/cheeryun/222383212241)
 ``` bash 
 
 ~$ xhost +    # 모든 클라이언트에 대해서 Host의 xhost 접근 허용 
@@ -63,6 +63,13 @@ docker exec -it [ContainerID or NAMES] /bin/bash
 -v /home/kist-ubuntu/workspace:/root/workspace \   # 로컬 PC와 공유할 작업 공간 
 -it <도커 이미지> \
 /bin/bash
+
+```
+__Example__:
+```bash 
+~$ xhost + 
+
+~$ docker run --gpus all --net=host --ipc=host -v /tmp/.X11-unix:/tmp/.X11-unix --device=/dev/video0:/dev/video0 -e DISPLAY=$DISPLAY --env QT_X11_NO_MITSHM=1 -v <공유할 작업공간>:/root/workspace -it <도커_이미지> /bin/bash
 
 ```
 
