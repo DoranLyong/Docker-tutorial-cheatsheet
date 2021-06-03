@@ -60,9 +60,11 @@ docker exec -it [ContainerID or NAMES] /bin/bash
 --device=/dev/video0:/dev/video0 \     # Host의 카메라 장비를 컨테이너에 전달  
 -e DISPLAY=$DISPLAY \   # Host의 DISPLAY ID 전달 
 --env QT_X11_NO_MITSHM=1 \ # OpenCV에서 DISPLAY 사용시 필요 
+-p 5000:5000  # Host의 5000번 포트와 연결 (port forward)
+-p 8888:8888  # Host의 8888번 포트와 연결 
 -v /home/kist-ubuntu/workspace:/root/workspace \   # 로컬 PC와 공유할 작업 공간 
--it <도커 이미지> \
-/bin/bash
+-it <도커 이미지> \  # -it ; starts an interactive session
+/bin/bash      # runs .bashrc file on startup
 
 ```
 __Example__:
