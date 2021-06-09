@@ -53,10 +53,11 @@ docker exec -it [ContainerID or NAMES] /bin/bash
 ~$ xhost +    # 모든 클라이언트에 대해서 Host의 xhost 접근 허용 
 
 ~$ docker run 
+--name <컨테이너 이름> \ 
 --gpus all \ 
 --net=host \    # 로컬  PC의 IP와 동일하게 
 --ipc=host \    # 컨테이너간 소켓통신
--v /tmp/.X11-unix:/tmp/.X11-unix  \    # Host의 X-window 컨테이너의 X-window 연결 (volume mount)
+-v /tmp/.X11-unix:/tmp/.X11-unix:rw  \    # Host의 X-window 컨테이너의 X-window 연결 (volume mount)
 --device=/dev/video0:/dev/video0 \     # Host의 카메라 장비를 컨테이너에 전달  
 -e DISPLAY=$DISPLAY \   # Host의 DISPLAY ID 전달 
 --env QT_X11_NO_MITSHM=1 \ # OpenCV에서 DISPLAY 사용시 필요 
