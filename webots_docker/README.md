@@ -28,7 +28,9 @@
 ```
 
 
-#### (추가) ROS rviz도 docker로 실행하려면 
+#### (추가)rviz,rqt, gazebo 등등 ROS관련 GUI도 docker로 실행하려면 
+* [여기 링크](http://wiki.ros.org/docker/Tutorials/Hardware%20Acceleration) 참고 
+* 
 ```bash
 ~$ xhost +  
 
