@@ -30,7 +30,27 @@
 
 #### (추가)rviz,rqt, gazebo 등등 ROS관련 GUI도 docker로 실행하려면 
 * [여기 링크](http://wiki.ros.org/docker/Tutorials/Hardware%20Acceleration) 참고 
-* 
+* ```Dockerfile```에서 ```NVIDIA``` 관련 환경변수를 사용할 수 있게 설정 
+* ```$XAUTH```환경 변수로 X-서버를 사용할 수 있게 설정 
+* ```$XAUTH```환경 변수가 없다면 아래 ```bash``` 코드로 생성 
+```bash
+XAUTH=/tmp/.docker.xauth
+if [ ! -f $XAUTH ]
+then
+    xauth_list=$(xauth nlist :0 | sed -e 's/^..../ffff/')
+    if [ ! -z "$xauth_list" ]
+    then
+        echo $xauth_list | xauth -f $XAUTH nmerge -
+    else
+        touch $XAUTH
+    fi
+    chmod a+r $XAUTH
+fi
+
+```
+
+### 실행 
+
 ```bash
 ~$ xhost +  
 
