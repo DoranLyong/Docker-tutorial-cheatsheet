@@ -11,6 +11,7 @@ then
     chmod a+r $XAUTH
 fi
 
+xhost +
 
 docker run -it \
     --name mybom_emergency_ros \
