@@ -13,7 +13,7 @@ fi
 
 
 docker run -it \
-    --name mybom_ros \
+    --name mybom_emergency_ros \
     --gpus all \
     --device=/dev/video0:/dev/video0 \
     --env="DISPLAY=$DISPLAY" \
@@ -22,5 +22,5 @@ docker run -it \
     --env="XAUTHORITY=$XAUTH" \
     --volume="$XAUTH:$XAUTH" \
     -v $HOME:/workspace \
-    doranlyong/mybom_emergency:ros-melodic-v0.1\
+    doranlyong/mybom_emergency:ros-melodic-v0.2\
     bash
