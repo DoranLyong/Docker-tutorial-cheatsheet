@@ -23,5 +23,5 @@ docker run -it \
     --env="XAUTHORITY=$XAUTH" \
     --volume="$XAUTH:$XAUTH" \
     -v $HOME:/workspace \
-    doranlyong/mybom_emergency:ros-melodic-v0.3\
+    doranlyong/mybom_emergency:ros-melodic-v0.6\
     bash
