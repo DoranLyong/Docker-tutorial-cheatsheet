@@ -13,7 +13,7 @@ fi
 
 
 sudo docker run -t -d  \
-    --name mybom_emergency_ros \
+    --name mybom_emergency \
     --gpus all \
     --device=/dev/video0:/dev/video0 \
     --env="DISPLAY=$DISPLAY" \
