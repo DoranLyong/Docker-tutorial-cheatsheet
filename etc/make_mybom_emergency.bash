@@ -11,9 +11,8 @@ then
     chmod a+r $XAUTH
 fi
 
-xhost +
 
-docker run -it \
+sudo docker run -t -d  \
     --name mybom_emergency_ros \
     --gpus all \
     --device=/dev/video0:/dev/video0 \
