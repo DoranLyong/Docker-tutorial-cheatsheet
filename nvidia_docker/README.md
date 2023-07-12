@@ -16,9 +16,9 @@ sudo usermod -aG docker $USER #현재 접속중인 사용자에게 권한주기
 sudo usermod -aG docker your-user #your-user 사용자에게 권한주기
 
 # 우분투 재부팅
-# but, 재부팅 없이 하려면 아래 명령어 사용
 sudo systemctl reboot
-또는
+
+# 또는, 재부팅 없이 하려면 아래 명령어 사용
 sudo -su $USER
 ```
 
