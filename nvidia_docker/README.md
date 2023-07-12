@@ -14,6 +14,12 @@ sudo docker version
 ```bash
 sudo usermod -aG docker $USER #현재 접속중인 사용자에게 권한주기 
 sudo usermod -aG docker your-user #your-user 사용자에게 권한주기
+
+# 우분투 재부팅
+# but, 재부팅 없이 하려면 아래 명령어 사용
+sudo systemctl reboot
+또는
+sudo -su $USER
 ```
 
 ### 4. [Docker Compose 설치](https://docs.microsoft.com/ko-kr/visualstudio/docker/tutorials/use-docker-compose) - 다중 컨테이너 애플리케이션을 정의하고 공유할 수 있도록 개발된 도구
