@@ -23,6 +23,7 @@ sudo docker run -t -d \
     --env="XAUTHORITY=$XAUTH" \
     --volume="$XAUTH:$XAUTH" \
     --runtime=nvidia \
+    --cpuset-cpus=0-29 \
     --gpus=all \
     --net=host \
     --ipc=host \
